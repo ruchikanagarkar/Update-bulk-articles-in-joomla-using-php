@@ -1,6 +1,7 @@
 <?php
 /*
  * Script for updating articles to fix assets table without opening and re-saving articles.
+ * This works if you are using ACL manager extension to fix the assets table
 */
 if (!defined('_JEXEC')) {
     define( '_JEXEC', 1 );
