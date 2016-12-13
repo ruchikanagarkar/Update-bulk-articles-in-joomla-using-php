@@ -6,6 +6,7 @@ There are 2 scripts :
 
 Note:- You might get an error:
 > 0 - Call to a member function reorder() on boolean . 
+
 This occurs on of line number 702 of `administrator/components/com_content/models/article.php`. To avoid this, you can temporarily modify line 602 in save method of the model -  
 ```php 
 if (isset($data['featured']))
