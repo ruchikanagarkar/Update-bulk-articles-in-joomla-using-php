@@ -15,7 +15,8 @@ $app = JFactory::getApplication('site');
 
 $basePath = JPATH_ADMINISTRATOR.'/components/com_content';
 require_once $basePath.'/models/article.php';
-$article_model =  JModelLegacy::getInstance('Article','ContentModel');
+$config  = array('table_path' => $basePath.'/tables');
+$article_model = new ContentModelArticle($config);
 $db = JFactory::getDbo();
 
 
