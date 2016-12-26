@@ -17,7 +17,8 @@ $db = JFactory::getDbo();
 
 $basePath = JPATH_ADMINISTRATOR.'/components/com_content';
 require_once $basePath.'/models/article.php';
-$article_model =  JModelLegacy::getInstance('Article','ContentModel');
+$config  = array('table_path' => $basePath.'/tables');
+$article_model = new ContentModelArticle($config);
 
 require_once JPATH_ADMINISTRATOR.'/components/com_aclmanager/models/diagnostic.php';
 $acl_model =  JModelLegacy::getInstance('Diagnostic','AclmanagerModel');
